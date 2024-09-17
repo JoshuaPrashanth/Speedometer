@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.back {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.meter {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 475px;
+    background-repeat: no-repeat;
+    background-position-x: -60px;
+    background-position-y: -20px;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.circle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(255, 166, 0);
+    box-shadow: 0 0 10px rgb(255, 166, 0);
+}
+.needle {
+    position: absolute;
+    bottom: 175px;
+    height: 100px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: rgb(255, 166, 0);
+    transform-origin: bottom;
+    transform: rotate(-135deg);
+    box-shadow: 0 0 5px rgb(255, 166, 0);
+}
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 500px;
+    height: 140px;
+    width: 100%;
+}
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.brake {
+    height: 100%;
+    width: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 5px red);
+}
+.accelerator {
+    height: 100%;
+    width: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 5px blue);
+}
+.wheel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-size: contain;
+    animation: animate 2s linear infinite;
+}
+.smeter {
+    transform: translateY(-20px);
+}
+h1 {
+    color: white;
+    font-family: "Holtwood One SC", serif;
+    position: absolute;
+    left: 130px;
+    top: 50px;
+    font-size: 30px;
+}
+.os {
+    color: orange;
+}
+.to {
+    color: aqua;
+}
+@keyframes animate {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
