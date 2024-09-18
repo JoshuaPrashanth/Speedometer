@@ -14,18 +14,18 @@ function down(){
 function br(){
     needle.style.cssText = "transform: rotate(-135.01deg); transition: 2s;";
 }
-acc.addEventListener("mousedown", ()=>{
+acc.addEventListener("touchstart", ()=>{
     up();
     low.pause();
     rise.play();
 })
-acc.addEventListener("mouseup", ()=>{
+acc.addEventListener("touchend", ()=>{
     down();
     rise.pause();
     low.play();
 })
 
-brake.addEventListener("mouseup", ()=>{
+brake.addEventListener("touchstart", ()=>{
     br();
     rise.pause();
     low.pause();
