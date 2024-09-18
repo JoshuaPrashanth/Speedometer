@@ -5,16 +5,18 @@ let rise = document.querySelector(".rise");
 let low = document.querySelector(".low");
 let bsound = document.querySelector(".bsound");
 
-
 function up(){
-    needle.style.cssText = "transform-origin: bottom;transform: rotate(135deg); transition: 9s ease-out;";
+    needle.style.cssText = "transform-origin: bottom;transform: rotate(135deg); transition: 8s ease-out;";
 }
 function down(){
-    needle.style.cssText = "transform-origin: bottom;transform: rotate(-135deg); transition: 10s;";
+    needle.style.cssText = "transform-origin: bottom;transform: rotate(-135deg); transition: 12s;";
+}
+function br(){
+    needle.style.cssText = "transform: rotate(-135.01deg); transition: 2s;";
 }
 acc.addEventListener("mousedown", ()=>{
-    low.pause();
     up();
+    low.pause();
     rise.play();
 })
 acc.addEventListener("mouseup", ()=>{
@@ -24,5 +26,8 @@ acc.addEventListener("mouseup", ()=>{
 })
 
 brake.addEventListener("mouseup", ()=>{
+    br();
+    rise.pause();
+    low.pause();
     bsound.play();
 })
